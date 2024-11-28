@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pecan Street Lending</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"> 
+    <style>   
+
+        /* Basic Styling with Red, White, and Blue Color Scheme */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark gray text color */
+        }
+
+        header {
+            background-color: #c00; /* Red header */
+            color: #fff; /* White header text */
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #c00; /* Red footer */
+            color: #fff; /* White footer text */
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #openPopup { /* Style for the button */
+            background-color: #007bff; /* Blue button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Form Styling */
+        #myForm {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"],   
+ select {
+            width: 100%;
+            padding:   
+ 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;   
+ /* Blue submit button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Pecan St. Lending</h2>
+            <p>We help investors achieve high returns through private money lending.</p> 
+
+            <button id="openPopup">Submit Your Deal</button> 
+
+            <div id="myForm" style="display: none;"> 
+                <h3>Submit Your Deal</h3>
+                <form action="submit.php" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone"><br><br>
+  <input type="submit" value="Submit">
+</form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script>
+        // Simple JavaScript to show/hide the form
+        const openPopupButton = document.getElementById('openPopup');
+        const myForm = document.getElementById('myForm');
+
+        openPopupButton.addEventListener('click', () => {
+            myForm.style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>
